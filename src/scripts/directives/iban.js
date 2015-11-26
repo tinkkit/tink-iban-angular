@@ -1,11 +1,11 @@
 'use strict';
 (function(module) {
   try {
-    module = angular.module('tink.skeleton');
+    module = angular.module('tink.iban');
   } catch (e) {
-    module = angular.module('tink.skeleton', []);
+    module = angular.module('tink.iban', []);
   }
-  module.directive('tinkSkeleton', [function () {
+  module.directive('tinkIban', [function () {
     return {
       restrict: 'EA',
       scope: {

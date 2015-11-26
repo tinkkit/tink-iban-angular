@@ -1,10 +1,10 @@
-# Tink skeleton Angular directive
+# Tink IBAN Angular directive
 
 v1.0.0
 
 ## What is this repository for?
 
-The Tink Angular skeleton provides a scaffold for a directive or service that can easily work with Tink.
+The Tink Angular IBAN directive provides you with an input field preformatted for international bank account numbers.
 
 Tink is an in-house developed easy-to-use front end framework for quick prototyping and simple deployment of all kinds of websites and apps, keeping a uniform and consistent look and feel.
 
@@ -18,11 +18,37 @@ Tink is an in-house developed easy-to-use front end framework for quick prototyp
 ### Install
 
 1. Go to the root of your project and type the following command in your terminal:
-   `bower install tink-back-to-top-angular --save`
+   `bower install tink-iban-angular --save`
 
-2. Include `dist/tink-back-to-top-angular.js` and its necessary dependencies in your project.
+2. Add the following files to your project:
 
-3. On http://tink.digipolis.be you will find all necessary documentation.
+  `<link rel="stylesheet" href="bower_components/tink-core/dist/tink.css" />` (or one of the Tink themes)
+
+  `<script src="bower_components/tink-iban-angular/dist/tink-iban-angular.js"></script>`
+
+3. Add `tink.iban` to your app module's dependency.
+
+  `angular.module('myApp', ['tink.iban']);`
+
+4. On http://tink.digipolis.be you will find all necessary documentation.
+
+
+----------
+
+
+## How to use
+
+### Component
+
+```html
+<tink-iban required="required" name="ibanField" data-ng-model="ibanModel"></tink-iban>
+```
+
+### Options
+
+Attr | Type | Default | Details
+--- | --- | --- | ---
+data-ng-model (required) | `[object]` | `[]` | This variable holds the preformatted text.
 
 ## Contribution guidelines
 
