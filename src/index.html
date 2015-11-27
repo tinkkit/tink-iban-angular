@@ -12,7 +12,17 @@
 </head>
 <body>
 
-<tink-iban data-text="IBAN is working fine!"></tink-iban>
+<div class="main">
+  <div class="container">
+    <div class="row margin-top">
+      <div class="col-xs-12 col-sm-10 col-sm-push-1 col-md-8 col-md-push-2 col-lg-6 col-lg-push-3">
+        <tink-iban required="required" name="ibanField" data-ng-model="ibanModel"></tink-iban>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- <tink-iban data-text="IBAN is working fine!"></tink-iban> -->
+
 
 <!-- bower:js -->
 <script src="bower_components/jquery/dist/jquery.js"></script>
@@ -23,8 +33,11 @@
 <script src="bower_components/angular-animate/angular-animate.js"></script>
 <script src="bower_components/angular-touch/angular-touch.js"></script>
 <script src="bower_components/angular-route/angular-route.js"></script>
+<script src="bower_components/tink-helper-date-angular/dist/tink-helper-date-angular.js"></script>
+<script src="bower_components/tink-helper-safe-apply-angular/dist/tink-helper-safe-apply-angular.js"></script>
+<script src="bower_components/tink-helper-format-angular/dist/tink-helper-format-angular.js"></script>
 <!-- endbower -->
 
-<script src="scripts/directives/iban.js"></script>
+<script src="scripts/directives/tink-iban-angular.js"></script>
 </body>
 </html>
