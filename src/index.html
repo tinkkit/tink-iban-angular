@@ -16,7 +16,30 @@
   <div class="container">
     <div class="row margin-top">
       <div class="col-xs-12 col-sm-10 col-sm-push-1 col-md-8 col-md-push-2 col-lg-6 col-lg-push-3">
-        <tink-iban required="required" name="ibanField" data-ng-model="ibanModel"></tink-iban>
+        <!-- <tink-iban required="required" name="ibanField" data-ng-model="ibanModel"></tink-iban> -->
+        <form name="ibanForm" novalidate>
+          <div class="row form-group" data-ng-class="{'has-error':(ibanForm.ibanField.$dirty || ibanForm.submitted) && ibanForm.ibanField.$invalid,'has-success': (ibanForm.ibanField.$dirty || ibanForm.submitted) && ibanForm.ibanField.$valid}">
+            <div class="col-xs-12">
+              <label for="tink-username-example">IBAN</label>
+            </div>
+            <div class="col-xs-12 col-sm-6">
+              <div class="validation">
+                <tink-iban required="required" name="ibanField" data-ng-model="ibanModel"></tink-iban>
+              </div>
+            </div>
+            <div class="col-xs-12 col-sm-6">
+              <div class="messages" data-ng-messages="ibanForm.ibanField.$error" data-ng-if="(ibanForm.ibanField.$dirty || ibanForm.submitted)" >
+                <div class="text-danger" data-ng-message="required">Fill in your IBAN.</div>
+                <div class="text-danger" data-ng-message="format">Fill in a valid IBAN.</div>
+              </div>
+            </div>
+          </div>
+          <div class="row form-group">
+            <div class="col-xs-12">
+              <button data-ng-click="validateIBAN()" type="button" class="btn-primary">Validate</button>
+            </div>
+          </div>
+        </form>
       </div>
     </div>
   </div>

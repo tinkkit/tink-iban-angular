@@ -1,6 +1,6 @@
 # Tink IBAN Angular directive
 
-v1.0.0
+v1.0.1
 
 ## What is this repository for?
 
@@ -22,13 +22,19 @@ Tink is an in-house developed easy-to-use front end framework for quick prototyp
 
 2. Add the following files to your project:
 
-  `<link rel="stylesheet" href="bower_components/tink-core/dist/tink.css" />` (or one of the Tink themes)
+    `<link rel="stylesheet" href="bower_components/tink-core/dist/tink.css" />` (or one of the Tink themes)
 
-  `<script src="bower_components/tink-iban-angular/dist/tink-iban-angular.js"></script>`
+    `<script src="bower_components/tink-iban-angular/dist/tink-iban-angular.js"></script>`
+
+    `<script src="bower_components/tink-helper-format-angular/dist/tink-helper-format-angular.js"></script>`
+
+    `<script src="bower_components/tink-helper-safe-apply-angular/dist/tink-helper-safe-apply-angular.js"></script>`
+
+    `<script src="bower_components/iban/iban.js"></script>`
 
 3. Add `tink.iban` to your app module's dependency.
 
-  `angular.module('myApp', ['tink.iban']);`
+    `angular.module('myApp', ['tink.iban']);`
 
 4. On http://tink.digipolis.be you will find all necessary documentation.
 
